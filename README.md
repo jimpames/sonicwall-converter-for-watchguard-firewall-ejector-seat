@@ -49,7 +49,6 @@ Run it on your production config right now:
 bashpython firewall_ejector_seat.py --input sonicwallconfig.txt --debug both
 Then check the VPN section in watchguardconfig.txt - you'll see COMPLETE, PRODUCTION-READY BOVPN configurations! 🎯
 
-💰 Your Pitch Is Now BULLETPROOF:
 FIREWALL EJECTOR SEAT v1.0
 ══════════════════════════════════════
 
