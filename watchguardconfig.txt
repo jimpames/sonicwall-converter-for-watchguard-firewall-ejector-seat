@@ -1,0 +1,155 @@
+# WatchGuard Configuration
+# Converted from SonicWall on 2025-10-11 14:16:34
+# Original config had 21159 lines
+# Conversion completed with ALL 5 PHASES!
+
+# ============================================================================
+# SECURITY ZONES (Phase 2A)
+# ============================================================================
+
+# SonicWall Zone: LAN
+# - Security Type: 
+# WatchGuard Mapping: custom zone
+# Confidence: 60%
+# ⚠️  MANUAL REVIEW REQUIRED
+
+# SonicWall Zone: DMZ
+# - Security Type: public
+# WatchGuard Mapping: optional zone
+# Confidence: 95%
+
+# SonicWall Zone: SSLVPN
+# - Security Type: sslvpn
+# WatchGuard Mapping: vpn zone
+# Confidence: 95%
+
+# SonicWall Zone: WLAN
+# - Security Type: wireless
+# WatchGuard Mapping: trusted zone
+# Confidence: 95%
+
+# ============================================================================
+# INTERFACES (Phase 2B)
+# ============================================================================
+
+# SonicWall Interface: X1
+# WatchGuard Interface: 0
+interface 0
+exit
+
+# SonicWall Interface: X3
+# WatchGuard Interface: 1
+interface 1
+exit
+
+# SonicWall Interface: X0
+# WatchGuard Interface: 2
+interface 2
+exit
+
+# ============================================================================
+# VPN POLICIES (Phase 2C)
+# ============================================================================
+
+# SonicWall VPN: WAN GroupVPN
+# WatchGuard VPN: WAN-GroupVPN
+# BOVPN configuration
+
+# ============================================================================
+# FIREWALL POLICIES - ACCESS RULES (Phase 2D)
+# ============================================================================
+
+# SonicWall Access Rule #1
+# - From: LAN → To: WAN
+# - Action: allow
+# - Comment: "IPv4:From Any to Any for Any service"
+# WatchGuard Policy: Policy-001-LAN-to-WAN
+# Confidence: 95%
+#
+policy
+  name Policy-001-LAN-to-WAN
+  from alias Custom
+  to alias Wan
+  service Any
+  firewall allowed
+  exit
+
+# SonicWall Access Rule #2
+# - From: LAN → To: WLAN
+# - Action: allow
+# - Comment: "IPv4:From Any to Any for Any service"
+# WatchGuard Policy: Policy-002-LAN-to-WLAN
+# Confidence: 95%
+#
+policy
+  name Policy-002-LAN-to-WLAN
+  from alias Custom
+  to alias Trusted
+  service Any
+  firewall allowed
+  exit
+
+# SonicWall Access Rule #3
+# - From: WAN → To: DMZ
+# - Action: deny
+# - Comment: "IPv4:From Any to Any for Any service"
+# WatchGuard Policy: Policy-003-WAN-to-DMZ
+# Confidence: 95%
+#
+policy
+  name Policy-003-WAN-to-DMZ
+  from alias Wan
+  to alias Optional
+  service Any
+  firewall denied
+  exit
+
+# SonicWall Access Rule #4
+# - From: DMZ → To: LAN
+# - Action: deny
+# - Comment: "IPv4:From Any to Any for Any service"
+# WatchGuard Policy: Policy-004-DMZ-to-LAN
+# Confidence: 95%
+#
+policy
+  name Policy-004-DMZ-to-LAN
+  from alias Optional
+  to alias Custom
+  service Any
+  firewall denied
+  exit
+
+# SonicWall Access Rule #5
+# - From: DMZ → To: WLAN
+# - Action: deny
+# - Comment: "IPv4:From Any to Any for Any service"
+# WatchGuard Policy: Policy-005-DMZ-to-WLAN
+# Confidence: 95%
+#
+policy
+  name Policy-005-DMZ-to-WLAN
+  from alias Optional
+  to alias Trusted
+  service Any
+  firewall denied
+  exit
+
+# SonicWall Access Rule #6
+# - From: WLAN → To: WAN
+# - Action: allow
+# - Comment: "IPv4:From Any to Any for Any service"
+# WatchGuard Policy: Policy-006-WLAN-to-WAN
+# Confidence: 95%
+#
+policy
+  name Policy-006-WLAN-to-WAN
+  from alias Trusted
+  to alias Wan
+  service Any
+  firewall allowed
+  exit
+
+# ============================================================================
+# NAT POLICIES (Phase 2E) - FINAL PHASE!
+# ============================================================================
+
