@@ -65,12 +65,6 @@ Market Value:
 - 40,000 USA MSPs = $40M market
 - 180,000 global MSPs = $180M market
 
-Your MSP Gets:
-- $250K one-time investment
-- Perpetual unlimited license
-- Save $4M on 500 firewall migrations
-- Competitive advantage
-- First-mover position
 
 ROI: 1,500% in Year 1
 
