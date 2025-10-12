@@ -1,32 +1,23 @@
 ================================================================================
-FIREWALL EJECTOR SEAT v1.0 - CONVERSION REPORT
-N2NHU Labs / MTOR Foundation
+FIREWALL EJECTOR SEAT - CONVERSION REPORT
 ================================================================================
 
-Conversion Date: 2025-10-11 18:14:48
+STATISTICS:
+  Zones: 7
+  Interfaces: 9
+  VPNs: 2
+  Access Rules: 12
+  NAT Policies: 0
+  Address Objects: 4
+  Address Groups: 0
 
-================================================================================
-CONVERSION STATISTICS
-================================================================================
-
-  Total Lines Processed:     21159
-  Lines Converted:           18
-  Errors:                    0
-  Warnings:                  0
-
-  Zones Converted:           4
-  Interfaces Converted:      3
-  VPN Policies Converted:    1
-  Access Rules Converted:    6
-  NAT Policies Converted:    0
-
-================================================================================
-ITEMS REQUIRING MANUAL REVIEW
-================================================================================
-
-  ⚠️  Zone 'LAN': Low confidence (60%)
-
-================================================================================
-FIREWALL EJECTOR SEAT v1.0 - Conversion Complete
-For support: contact N2NHU Labs / MTOR Foundation
-================================================================================
+CONVERSIONS:
+  [zone] LAN → trusted (0.95%)
+  [zone] WAN → external (0.95%)
+  [zone] DMZ → optional (0.9%)
+  [zone] VPN → vpn (0.95%)
+  [zone] SSLVPN → trusted (50%)
+  [zone] MULTICAST → trusted (50%)
+  [zone] WLAN → trusted (0.85%)
+  [vpn] WAN GroupVPN → WAN-GroupVPN (85%)
+  [vpn] WLAN GroupVPN → WLAN-GroupVPN (85%)
