@@ -19756,7 +19756,7 @@ vpn policy group-vpn "WAN GroupVPN"
     proposal ipsec encryption triple-des
     proposal ipsec authentication sha-1
     no proposal ipsec perfect-forward-secrecy
-    proposal ipsec lifetime 28800
+    proposal ipsec lifetime 3600
     anti-replay
     no permit-acceleration
     no multicast
@@ -19789,7 +19789,7 @@ vpn policy group-vpn "WLAN GroupVPN"
     proposal ipsec encryption triple-des
     proposal ipsec authentication sha-1
     no proposal ipsec perfect-forward-secrecy
-    proposal ipsec lifetime 28800
+    proposal ipsec lifetime 3600
     anti-replay
     no permit-acceleration
     no multicast
