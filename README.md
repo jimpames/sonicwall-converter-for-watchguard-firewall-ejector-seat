@@ -17,8 +17,11 @@ NAT and Policies
 production commercial ready
 
 coming 3rd week Oct 2025 - support for:
+
  static routing
+
  ipv6 support
+ 
  vlan interfaces
 
  to close gaps
