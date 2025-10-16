@@ -11,5 +11,7 @@ $1000 per MSP - licensing@mtorfoundation.org
 
 14 oct 24 - added support for address and service groups and objects.
 
-remaining work:
+16 Oct added :
 NAT and Policies
+
+production commercial ready
