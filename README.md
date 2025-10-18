@@ -16,7 +16,7 @@ NAT and Policies
 
 production commercial ready
 
-coming 3rd week Oct 2025 - support for:
+completed 3rd week Oct 2025 - support for:
 
  static routing
 
@@ -24,4 +24,6 @@ coming 3rd week Oct 2025 - support for:
  
  vlan interfaces
 
- this work will close gaps
+ this work closed gaps...
+
+ see user manual
