@@ -26,3 +26,6 @@ completed 3rd week Oct 2025 - support for:
  this work closed gaps...
 
  see user manual
+
+demo
+https://youtu.be/nHGkxSgEhkA?si=9IqpnnBGUPLb5P1o
