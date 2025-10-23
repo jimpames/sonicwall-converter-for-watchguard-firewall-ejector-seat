@@ -6,7 +6,8 @@ see the pdf or website for details
 https://notcloudai.com/n2nhu-labs-mtor-foundation-announces-firewall-ejector-seat-v-1-sonicwall-firewall-migrator-for-watchguard/
 
 
-$1000 per MSP - licensing@mtorfoundation.org 
+$1000 per MSP * or * $100 per sonicwall
+- licensing@mtorfoundation.org 
 
 14 oct 24 - added support for address and service groups and objects.
 
